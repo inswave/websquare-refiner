@@ -13,5 +13,6 @@
     "url": "https://github.com/inswave/websquare-refiner.git"
   },
   "dependencies": {
+    "nightmare": "^1.8.2"
   }
 }
