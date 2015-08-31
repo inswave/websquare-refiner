@@ -1,0 +1,17 @@
+{
+  "name": "websquare-refiner",
+  "version": "0.0.1",
+  "author": "maninzoo",
+  "keywords": [
+    "websquare",
+    "nightmare",
+    "phantomjs"
+  ],
+  "description": "Refine WebSquare source",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/inswave/websquare-refiner.git"
+  },
+  "dependencies": {
+  }
+}
