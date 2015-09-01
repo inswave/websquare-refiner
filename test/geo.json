@@ -1,0 +1,658 @@
+[{
+  "id": "ZCAMSTGT00318",
+  "geo": {
+    "left": 7,
+    "right": 837,
+    "top": 7,
+    "height": 589,
+    "bottom": 596,
+    "width": 830
+  },
+  "childCount": 10,
+  "name": "div",
+  "classList": {
+    "0": "w2group",
+    "length": 1
+  },
+  "wClass": "w2group",
+  "childItems": [{
+    "id": "grd_ChnlSend",
+    "geo": {
+      "left": 15,
+      "right": 826,
+      "top": 125,
+      "height": 418,
+      "bottom": 543,
+      "width": 811
+    },
+    "childCount": 7,
+    "name": "div",
+    "classList": {
+      "0": "w2grid",
+      "length": 1
+    },
+    "wClass": "w2grid"
+  }, {
+    "id": "grd_ObjGrpExtrt",
+    "geo": {
+      "left": 15,
+      "right": 826,
+      "top": 125,
+      "height": 418,
+      "bottom": 543,
+      "width": 811
+    },
+    "childCount": 7,
+    "name": "div",
+    "classList": {
+      "0": "w2grid",
+      "length": 1
+    },
+    "wClass": "w2grid"
+  }, {
+    "id": "grd_AlertProcSpc",
+    "geo": {
+      "left": 15,
+      "right": 826,
+      "top": 125,
+      "height": 422,
+      "bottom": 547,
+      "width": 811
+    },
+    "childCount": 7,
+    "name": "div",
+    "classList": {
+      "0": "w2grid",
+      "length": 1
+    },
+    "wClass": "w2grid"
+  }, {
+    "id": "div_navi",
+    "geo": {
+      "left": 678,
+      "right": 827,
+      "top": 101,
+      "height": 21,
+      "bottom": 122,
+      "width": 149
+    },
+    "childCount": 8,
+    "name": "div",
+    "classList": {
+      "0": "w2group",
+      "length": 1
+    },
+    "wClass": "w2group",
+    "childItems": [{
+      "id": "ST_STN0",
+      "geo": {
+        "left": 784,
+        "right": 794,
+        "top": 36,
+        "height": 21,
+        "bottom": 57,
+        "width": 10
+      },
+      "childCount": 0,
+      "name": "div",
+      "classList": {
+        "0": "w2textbox",
+        "length": 1
+      },
+      "wClass": "w2textbox"
+    }, {
+      "id": "MaskEdit0",
+      "geo": {
+        "left": 727,
+        "right": 786,
+        "top": 38,
+        "height": 23,
+        "bottom": 61,
+        "width": 59
+      },
+      "childCount": 0,
+      "name": "input",
+      "classList": {
+        "0": "w2input",
+        "length": 1
+      },
+      "wClass": "w2input"
+    }, {
+      "id": "MAE_Normal0",
+      "geo": {
+        "left": 757,
+        "right": 816,
+        "top": 36,
+        "height": 23,
+        "bottom": 59,
+        "width": 59
+      },
+      "childCount": 0,
+      "name": "input",
+      "classList": {
+        "0": "w2input",
+        "length": 1
+      },
+      "wClass": "w2input"
+    }, {
+      "id": "BTN_Next0",
+      "geo": {
+        "left": 801,
+        "right": 819,
+        "top": 38,
+        "height": 21,
+        "bottom": 59,
+        "width": 18
+      },
+      "childCount": 0,
+      "name": "input",
+      "classList": {
+        "0": "w2trigger",
+        "1": "nextbtn",
+        "length": 2
+      },
+      "wClass": "w2trigger"
+    }, {
+      "id": "mae_LocalCnt",
+      "geo": {
+        "left": 679,
+        "right": 740,
+        "top": 101,
+        "height": 23,
+        "bottom": 124,
+        "width": 61
+      },
+      "childCount": 0,
+      "name": "input",
+      "classList": {
+        "0": "w2input",
+        "length": 1
+      },
+      "wClass": "w2input"
+    }, {
+      "id": "Static0",
+      "geo": {
+        "left": 735,
+        "right": 745,
+        "top": 101,
+        "height": 21,
+        "bottom": 122,
+        "width": 10
+      },
+      "childCount": 0,
+      "name": "div",
+      "classList": {
+        "0": "w2textbox",
+        "length": 1
+      },
+      "wClass": "w2textbox"
+    }, {
+      "id": "mae_TotalCnt",
+      "geo": {
+        "left": 749,
+        "right": 810,
+        "top": 101,
+        "height": 23,
+        "bottom": 124,
+        "width": 61
+      },
+      "childCount": 0,
+      "name": "input",
+      "classList": {
+        "0": "w2input",
+        "length": 1
+      },
+      "wClass": "w2input"
+    }, {
+      "id": "btn_next",
+      "geo": {
+        "left": 809,
+        "right": 827,
+        "top": 101,
+        "height": 21,
+        "bottom": 122,
+        "width": 18
+      },
+      "childCount": 0,
+      "name": "input",
+      "classList": {
+        "0": "w2trigger",
+        "1": "nextbtn",
+        "length": 2
+      },
+      "wClass": "w2trigger"
+    }]
+  }, {
+    "id": "div_SearchPanel",
+    "geo": {
+      "left": 15,
+      "right": 825,
+      "top": 15,
+      "height": 76,
+      "bottom": 91,
+      "width": 810
+    },
+    "childCount": 19,
+    "name": "div",
+    "classList": {
+      "0": "w2group",
+      "length": 1
+    },
+    "wClass": "w2group",
+    "childItems": [{
+      "id": "cob_ObjTyp",
+      "geo": {
+        "left": 531,
+        "right": 723,
+        "top": 55,
+        "height": 21,
+        "bottom": 76,
+        "width": 192
+      },
+      "childCount": 1,
+      "name": "div",
+      "classList": {
+        "0": "w2selectbox",
+        "length": 1
+      },
+      "wClass": "w2selectbox"
+    }, {
+      "id": "btn_Search",
+      "geo": {
+        "left": 744,
+        "right": 803,
+        "top": 54,
+        "height": 23,
+        "bottom": 77,
+        "width": 59
+      },
+      "childCount": 0,
+      "name": "input",
+      "classList": {
+        "0": "w2trigger",
+        "1": "A_2word",
+        "length": 2
+      },
+      "wClass": "w2trigger"
+    }, {
+      "id": "Static2",
+      "geo": {
+        "left": 30,
+        "right": 95,
+        "top": 55,
+        "height": 21,
+        "bottom": 76,
+        "width": 65
+      },
+      "childCount": 0,
+      "name": "div",
+      "classList": {
+        "0": "w2textbox",
+        "length": 1
+      },
+      "wClass": "w2textbox"
+    }, {
+      "id": "cal_BrwsStaDt",
+      "geo": {
+        "left": 100,
+        "right": 205,
+        "top": 55,
+        "height": 21,
+        "bottom": 76,
+        "width": 105
+      },
+      "childCount": 2,
+      "name": "div",
+      "classList": {
+        "0": "w2inputCalendar_div",
+        "length": 1
+      },
+      "wClass": "w2inputCalendar_div"
+    }, {
+      "id": "ST_Label10",
+      "geo": {
+        "left": 209,
+        "right": 219,
+        "top": 55,
+        "height": 21,
+        "bottom": 76,
+        "width": 10
+      },
+      "childCount": 0,
+      "name": "div",
+      "classList": {
+        "0": "w2textbox",
+        "length": 1
+      },
+      "wClass": "w2textbox"
+    }, {
+      "id": "cal_BrwsEndDt",
+      "geo": {
+        "left": 222,
+        "right": 327,
+        "top": 55,
+        "height": 21,
+        "bottom": 76,
+        "width": 105
+      },
+      "childCount": 2,
+      "name": "div",
+      "classList": {
+        "0": "w2inputCalendar_div",
+        "length": 1
+      },
+      "wClass": "w2inputCalendar_div"
+    }, {
+      "id": "shp_LineEx22",
+      "geo": {
+        "left": 732,
+        "right": 733,
+        "top": 29,
+        "height": 48,
+        "bottom": 77,
+        "width": 1
+      },
+      "childCount": 0,
+      "name": "div",
+      "classList": {
+        "0": "w2group",
+        "length": 1
+      },
+      "wClass": "w2group"
+    }, {
+      "id": "shp_LineEx2",
+      "geo": {
+        "left": 731,
+        "right": 732,
+        "top": 29,
+        "height": 48,
+        "bottom": 77,
+        "width": 1
+      },
+      "childCount": 0,
+      "name": "div",
+      "classList": {
+        "0": "w2group",
+        "length": 1
+      },
+      "wClass": "w2group"
+    }, {
+      "id": "st_opCl",
+      "geo": {
+        "left": 25,
+        "right": 95,
+        "top": 30,
+        "height": 21,
+        "bottom": 51,
+        "width": 70
+      },
+      "childCount": 0,
+      "name": "div",
+      "classList": {
+        "0": "w2textbox",
+        "length": 1
+      },
+      "wClass": "w2textbox"
+    }, {
+      "id": "cob_opCl",
+      "geo": {
+        "left": 100,
+        "right": 329,
+        "top": 30,
+        "height": 21,
+        "bottom": 51,
+        "width": 229
+      },
+      "childCount": 1,
+      "name": "div",
+      "classList": {
+        "0": "w2selectbox",
+        "length": 1
+      },
+      "wClass": "w2selectbox"
+    }, {
+      "id": "ST_LB_SEARCH_GB",
+      "geo": {
+        "left": 342,
+        "right": 407,
+        "top": 30,
+        "height": 21,
+        "bottom": 51,
+        "width": 65
+      },
+      "childCount": 0,
+      "name": "div",
+      "classList": {
+        "0": "w2textbox",
+        "length": 1
+      },
+      "wClass": "w2textbox"
+    }, {
+      "id": "stc_EvtOpObjCd",
+      "geo": {
+        "left": 461,
+        "right": 526,
+        "top": 55,
+        "height": 21,
+        "bottom": 76,
+        "width": 65
+      },
+      "childCount": 0,
+      "name": "div",
+      "classList": {
+        "0": "w2textbox",
+        "length": 1
+      },
+      "wClass": "w2textbox"
+    }, {
+      "id": "cob_EvtOpObjCd",
+      "geo": {
+        "left": 531,
+        "right": 723,
+        "top": 55,
+        "height": 21,
+        "bottom": 76,
+        "width": 192
+      },
+      "childCount": 1,
+      "name": "div",
+      "classList": {
+        "0": "w2selectbox",
+        "length": 1
+      },
+      "wClass": "w2selectbox"
+    }, {
+      "id": "STC_ObjTyp",
+      "geo": {
+        "left": 456,
+        "right": 526,
+        "top": 55,
+        "height": 21,
+        "bottom": 76,
+        "width": 70
+      },
+      "childCount": 0,
+      "name": "div",
+      "classList": {
+        "0": "w2textbox",
+        "length": 1
+      },
+      "wClass": "w2textbox"
+    }, {
+      "id": "rad_BrwsCl",
+      "geo": {
+        "left": 411,
+        "right": 721,
+        "top": 30,
+        "height": 21,
+        "bottom": 51,
+        "width": 310
+      },
+      "childCount": 1,
+      "name": "div",
+      "classList": {
+        "0": "w2radio",
+        "length": 1
+      },
+      "wClass": "w2radio"
+    }, {
+      "id": "rad_RltmBrwsCl",
+      "geo": {
+        "left": 411,
+        "right": 721,
+        "top": 30,
+        "height": 21,
+        "bottom": 51,
+        "width": 310
+      },
+      "childCount": 1,
+      "name": "div",
+      "classList": {
+        "0": "w2radio",
+        "length": 1
+      },
+      "wClass": "w2radio"
+    }, {
+      "id": "LB_ST",
+      "geo": {
+        "left": 348,
+        "right": 381,
+        "top": 55,
+        "height": 21,
+        "bottom": 76,
+        "width": 33
+      },
+      "childCount": 0,
+      "name": "div",
+      "classList": {
+        "0": "w2textbox",
+        "length": 1
+      },
+      "wClass": "w2textbox"
+    }, {
+      "id": "cob_batOpStCd",
+      "geo": {
+        "left": 386,
+        "right": 466,
+        "top": 55,
+        "height": 21,
+        "bottom": 76,
+        "width": 80
+      },
+      "childCount": 1,
+      "name": "div",
+      "classList": {
+        "0": "w2selectbox",
+        "length": 1
+      },
+      "wClass": "w2selectbox"
+    }, {
+      "id": "COB_ST_CD",
+      "geo": {
+        "left": 386,
+        "right": 466,
+        "top": 55,
+        "height": 21,
+        "bottom": 76,
+        "width": 80
+      },
+      "childCount": 1,
+      "name": "div",
+      "classList": {
+        "0": "w2selectbox",
+        "length": 1
+      },
+      "wClass": "w2selectbox"
+    }]
+  }, {
+    "id": "btn_ReExec",
+    "geo": {
+      "left": 677,
+      "right": 760,
+      "top": 558,
+      "height": 23,
+      "bottom": 581,
+      "width": 83
+    },
+    "childCount": 0,
+    "name": "input",
+    "classList": {
+      "0": "w2trigger",
+      "1": "C_4word",
+      "length": 2
+    },
+    "wClass": "w2trigger"
+  }, {
+    "id": "btn_Save",
+    "geo": {
+      "left": 768,
+      "right": 827,
+      "top": 558,
+      "height": 23,
+      "bottom": 581,
+      "width": 59
+    },
+    "childCount": 0,
+    "name": "input",
+    "classList": {
+      "0": "w2trigger",
+      "1": "C_2word",
+      "length": 2
+    },
+    "wClass": "w2trigger"
+  }, {
+    "id": "btn_Cancel",
+    "geo": {
+      "left": 650,
+      "right": 733,
+      "top": 558,
+      "height": 23,
+      "bottom": 581,
+      "width": 83
+    },
+    "childCount": 0,
+    "name": "input",
+    "classList": {
+      "0": "w2trigger",
+      "1": "C_4word",
+      "length": 2
+    },
+    "wClass": "w2trigger"
+  }, {
+    "id": "btn_Rework",
+    "geo": {
+      "left": 744,
+      "right": 827,
+      "top": 558,
+      "height": 23,
+      "bottom": 581,
+      "width": 83
+    },
+    "childCount": 0,
+    "name": "input",
+    "classList": {
+      "0": "w2trigger",
+      "1": "C_4word",
+      "length": 2
+    },
+    "wClass": "w2trigger"
+  }, {
+    "id": "btn_Exec",
+    "geo": {
+      "left": 555,
+      "right": 638,
+      "top": 558,
+      "height": 23,
+      "bottom": 581,
+      "width": 83
+    },
+    "childCount": 0,
+    "name": "input",
+    "classList": {
+      "0": "w2trigger",
+      "1": "C_4word",
+      "length": 2
+    },
+    "wClass": "w2trigger"
+  }]
+}]
