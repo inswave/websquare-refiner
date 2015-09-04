@@ -1,5 +1,27 @@
 var Nightmare = require('nightmare');
-var _ = require('underscore');
+var underscore = require('underscore');
+
+var orderHandler = function orderHandler() {
+  var _ = underscore,
+      arrange = function arrange( childItems ) {
+        childItems.sort( function( item ) {
+
+        });
+
+
+        //_.each( childItems, function( d, i ) {
+        //  console.log( i + ' ' + d.id );
+        //  if ( d.childCount && d.childItems ) {
+        //    arrange( d.childItems );
+        //  }
+        //});
+      };
+
+  return function(comStructure) {
+    //console.log( comStructure );
+    arrange(comStructure);
+  }
+};
 
 // http://yahoo.com
 var testUrl = 'http://127.0.0.1:8080/w5_skt/websquare.html?w2xPath=/w5_samples/ZCAMSTGT00318.xml';
@@ -78,11 +100,10 @@ new Nightmare()
     depth += 1;
     treeWalker( body, 'body', comStructure );
 
-    return JSON.stringify(comStructure);
-  }, function( comStructure ) {
-    console.log( comStructure );
-    //debugger;
-  } )
+    //return JSON.stringify(comStructure);
+    return comStructure;
+  }, orderHandler()
+  )
   .run(function( err, nightmare ) {
     console.log('Done.');
   });
