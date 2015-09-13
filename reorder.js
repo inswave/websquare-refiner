@@ -7,14 +7,6 @@ var orderHandler = function orderHandler() {
         childItems.sort( function( item ) {
 
         });
-
-
-        //_.each( childItems, function( d, i ) {
-        //  console.log( i + ' ' + d.id );
-        //  if ( d.childCount && d.childItems ) {
-        //    arrange( d.childItems );
-        //  }
-        //});
       };
 
   return function(comStructure) {
@@ -100,7 +92,6 @@ new Nightmare()
     depth += 1;
     treeWalker( body, 'body', comStructure );
 
-    //return JSON.stringify(comStructure);
     return comStructure;
   }, orderHandler()
   )
