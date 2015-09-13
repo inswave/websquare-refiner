@@ -22,49 +22,51 @@ var storeData = function ( node, result ) {
   if ( node.nodeType === 1 ) {
     nodeName = node.nodeName;
 
-    if ( result[nodeName] ) {
-      result[nodeName].count += 1;
-    } else {
-      console.log( nodeName );
-      result[nodeName] = {};
-      result[nodeName].count = 1;
-    }
-
-    if ( node.hasAttributes() ) {
-      if ( !result[nodeName].attrs ) {
-        result[nodeName].attrs = {};
-      }
-      namedNodeMap = node.attributes;
-
-      for ( i = 0; i < namedNodeMap.length; i++ ) {
-        attr = namedNodeMap.item(i);
-
-        if ( result[nodeName].attrs[attr.name] ) {
-          result[nodeName].attrs[attr.name] += 1;
-        } else {
-          result[nodeName].attrs[attr.name] = 1;
-        }
-      }
-    }
-
-    if ( node.hasChildNodes() ) {
-      if ( nodeName === 'Grid' ) {
-        if ( !result[nodeName].subModules ) {
-          result[nodeName].subModules = {};
-        }
-        itemResult = result[nodeName].subModules;
-      } else if ( ( nodeName === 'head' || nodeName === 'body' ) &&
-                    node.parentNode.parentNode.nodeName === 'Grid' ) {
-        if ( !result[nodeName].subModules ) {
-          result[nodeName].subModules = {};
-        }
-        itemResult = result[nodeName].subModules;
+    if ( nodeName !== 'Datasets' ) {
+      if ( result[nodeName] ) {
+        result[nodeName].count += 1;
       } else {
-        itemResult = result;
+        console.log( nodeName );
+        result[nodeName] = {};
+        result[nodeName].count = 1;
       }
-      nodes = node.childNodes;
-      for ( i = 0; i < nodes.length; i++ ) {
-        storeData( nodes[i], itemResult );
+
+      if ( node.hasAttributes() ) {
+        if ( !result[nodeName].attrs ) {
+          result[nodeName].attrs = {};
+        }
+        namedNodeMap = node.attributes;
+
+        for ( i = 0; i < namedNodeMap.length; i++ ) {
+          attr = namedNodeMap.item(i);
+
+          if ( result[nodeName].attrs[attr.name] ) {
+            result[nodeName].attrs[attr.name] += 1;
+          } else {
+            result[nodeName].attrs[attr.name] = 1;
+          }
+        }
+      }
+
+      if ( node.hasChildNodes() ) {
+        if ( nodeName === 'Grid' ) {
+          if ( !result[nodeName].subModules ) {
+            result[nodeName].subModules = {};
+          }
+          itemResult = result[nodeName].subModules;
+        } else if ( ( nodeName === 'head' || nodeName === 'body' ) &&
+                      node.parentNode.parentNode.nodeName === 'Grid' ) {
+          if ( !result[nodeName].subModules ) {
+            result[nodeName].subModules = {};
+          }
+          itemResult = result[nodeName].subModules;
+        } else {
+          itemResult = result;
+        }
+        nodes = node.childNodes;
+        for ( i = 0; i < nodes.length; i++ ) {
+          storeData( nodes[i], itemResult );
+        }
       }
     }
   }
