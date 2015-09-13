@@ -76,7 +76,7 @@ var collectUsage = function(list) {
   var result = {};
 
   list.forEach( function( file, i ) {
-    //console.log( i + ' ' + file );
+    console.log( i + ' ' + file );
 
     var content = fs.readFileSync( file, 'utf-8' ),
         doc = new domParser().parseFromString(content),
@@ -113,7 +113,11 @@ var getFileList = function( dir, done ) {
             if ( !--pending ) done( null, results );
           } );
         } else {
-          results.push(file);
+          if ( file.lastIndexOf( '.xml' ) > 1 ) {
+            results.push(file);
+          } else {
+            console.log( 'Omit ' + file );
+          }
           if ( !--pending) done( null, results );
         }
       } );
