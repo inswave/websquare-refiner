@@ -1,14 +1,13 @@
 var fs = require('fs'),
     path = require('path');
 
-var domParser = require('xmldom').DOMParser,
-    xpath = require('xpath');
+var domParser = require('xmldom').DOMParser;
 
 var ArrayProto = Array.prototype,
     push       = ArrayProto.push;
 
-var targetDir = '/Users/maninzoo/Contents/webstorm/projects/websquare-refiner/samples/';
-//var targetDir = '/Users/maninzoo/Contents/temp/09_13_2015/mp/xml/';
+//var targetDir = '/Users/maninzoo/Contents/webstorm/projects/websquare-refiner/samples/';
+var targetDir = '/Users/maninzoo/Contents/temp/09_13_2015/mp/xml/';
 
 var storeData = function ( node, result ) {
   var i,
@@ -49,12 +48,12 @@ var storeData = function ( node, result ) {
       }
 
       if ( node.hasChildNodes() ) {
-        if ( nodeName === 'Grid' ) {
+        if ( nodeName === 'Grid' || nodeName === 'Radio' || nodeName === 'Combo' ) {
           if ( !result[nodeName].subModules ) {
             result[nodeName].subModules = {};
           }
           itemResult = result[nodeName].subModules;
-        } else if ( ( nodeName === 'head' || nodeName === 'body' ) &&
+        } else if ( ( nodeName === 'head' || nodeName === 'body' || nodeName === 'summary' ) &&
                       node.parentNode.parentNode.nodeName === 'Grid' ) {
           if ( !result[nodeName].subModules ) {
             result[nodeName].subModules = {};
