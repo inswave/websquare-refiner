@@ -53,6 +53,12 @@ var storeData = function ( node, result ) {
           result[nodeName].subModules = {};
         }
         itemResult = result[nodeName].subModules;
+      } else if ( ( nodeName === 'head' || nodeName === 'body' ) &&
+                    node.parentNode.parentNode.nodeName === 'Grid' ) {
+        if ( !result[nodeName].subModules ) {
+          result[nodeName].subModules = {};
+        }
+        itemResult = result[nodeName].subModules;
       } else {
         itemResult = result;
       }
