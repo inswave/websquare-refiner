@@ -15,7 +15,8 @@ var storeData = function ( node, result ) {
       nodeName,
       nodes,
       namedNodeMap,
-      attr;
+      attr,
+      itemResult;
 
   // ELEMENT_NODE
   if ( node.nodeType === 1 ) {
@@ -46,12 +47,18 @@ var storeData = function ( node, result ) {
       }
     }
 
-    if ( nodeName !== 'Grid' ) {
-      if ( node.hasChildNodes() ) {
-        nodes = node.childNodes;
-        for ( i = 0; i < nodes.length; i++ ) {
-          storeData( nodes[i], result );
+    if ( node.hasChildNodes() ) {
+      if ( nodeName === 'Grid' ) {
+        if ( !result[nodeName].subModules ) {
+          result[nodeName].subModules = {};
         }
+        itemResult = result[nodeName].subModules;
+      } else {
+        itemResult = result;
+      }
+      nodes = node.childNodes;
+      for ( i = 0; i < nodes.length; i++ ) {
+        storeData( nodes[i], itemResult );
       }
     }
   }
