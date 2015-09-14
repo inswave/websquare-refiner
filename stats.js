@@ -138,6 +138,7 @@ var sortData = function (data) {
 
     if ( obj.subModules ) {
       obj.subModules = sortData( obj.subModules );
+      obj.subModules = _.sortBy( obj.subModules, 'count' );
     }
 
     if ( obj.attrs ) {
@@ -148,12 +149,14 @@ var sortData = function (data) {
         });
         return memo;
       }, [] );
+
+      obj.attrs = _.sortBy( obj.attrs, 'count' );
     }
 
     return obj;
   } );
 
-  return result;
+  return _.sortBy( result, 'count' );
 };
 
 getFileList( targetDir, function( err, list ) {
