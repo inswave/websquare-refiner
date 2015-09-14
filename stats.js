@@ -1,5 +1,6 @@
 var fs = require('fs'),
-    path = require('path');
+    path = require('path'),
+    _ = require('underscore');
 
 var domParser = require('xmldom').DOMParser;
 
@@ -54,7 +55,8 @@ var storeData = function ( node, result ) {
           }
           itemResult = result[nodeName].subModules;
         } else if ( ( nodeName === 'head' || nodeName === 'body' || nodeName === 'summary' ) &&
-                      node.parentNode.parentNode.nodeName === 'Grid' ) {
+          ( node.parentNode.parentNode.nodeName === 'Grid' ||
+          ( node.parentNode.nodeName === 'format' && node.parentNode.parentNode.parentNode.nodeName === 'Grid' ) ) ) {
           if ( !result[nodeName].subModules ) {
             result[nodeName].subModules = {};
           }
@@ -125,7 +127,16 @@ var getFileList = function( dir, done ) {
 };
 
 var sortData = function (data) {
-  var result = [];
+  var result;
+
+  var keys = _.keys(data);
+  console.log(keys);
+
+  result = _.map( keys, function ( d ) {
+    var obj = data[d];
+    obj.type = d;
+    return obj;
+  } );
 
   return result;
 };
