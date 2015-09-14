@@ -135,6 +135,21 @@ var sortData = function (data) {
   result = _.map( keys, function ( d ) {
     var obj = data[d];
     obj.type = d;
+
+    if ( obj.subModules ) {
+      obj.subModules = sortData( obj.subModules );
+    }
+
+    if ( obj.attrs ) {
+      obj.attrs = _.reduce( obj.attrs, function ( memo, d, k ) {
+        memo.push( {
+          'attr': k,
+          'count': d
+        });
+        return memo;
+      }, [] );
+    }
+
     return obj;
   } );
 
