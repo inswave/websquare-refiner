@@ -7,7 +7,7 @@ var ArrayProto = Array.prototype,
     push       = ArrayProto.push;
 
 //var targetDir = '/Users/maninzoo/Contents/webstorm/projects/websquare-refiner/samples/';
-var targetDir = '/Users/maninzoo/Contents/temp/09_13_2015/mp/xml/';
+var targetDir = '/Users/maninzoo/Contents/temp/09_14_2015/mp/xml/';
 
 var storeData = function ( node, result ) {
   var i,
@@ -21,7 +21,7 @@ var storeData = function ( node, result ) {
   if ( node.nodeType === 1 ) {
     nodeName = node.nodeName;
 
-    if ( nodeName !== 'Datasets' ) {
+    if ( nodeName !== 'Datasets' && nodeName !== 'Script' ) {
       if ( result[nodeName] ) {
         result[nodeName].count += 1;
       } else {
@@ -88,7 +88,7 @@ var collectUsage = function(list) {
     }
   } );
 
-  console.log( JSON.stringify(result) );
+  return result;
 };
 
 var getFileList = function( dir, done ) {
@@ -124,10 +124,23 @@ var getFileList = function( dir, done ) {
   } );
 };
 
+var sortData = function (data) {
+  var result = [];
+
+  return result;
+};
+
 getFileList( targetDir, function( err, list ) {
+  var data,
+      sortedData;
+
   if ( err ) {
     console.error( err );
   }
 
-  collectUsage(list);
+  data = collectUsage(list);
+  console.log( JSON.stringify(data) );
+
+  sortedData = sortData(data);
+  console.log( JSON.stringify(sortedData) );
 } );
