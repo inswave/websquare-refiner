@@ -1,14 +1,15 @@
 var fs = require('fs'),
     path = require('path'),
-    _ = require('underscore');
-
-var domParser = require('xmldom').DOMParser;
+    _ = require('underscore'),
+    Iconv = require('iconv').Iconv;
 
 var ArrayProto = Array.prototype,
     push       = ArrayProto.push;
 
-//var targetDir = '/Users/maninzoo/Contents/webstorm/projects/websquare-refiner/samples/';
-var targetDir = '/Users/maninzoo/Contents/temp/09_14_2015/mp/xml/';
+var domParser = require('xmldom').DOMParser,
+    euckr2utf8 = new Iconv( 'EUC-KR', 'UTF-8');
+
+var targetDir = '/Users/maninzoo/Contents/temp/09_23_2015/conversion/xml/';
 
 var storeData = function ( node, result ) {
   var i,
@@ -76,12 +77,16 @@ var storeData = function ( node, result ) {
 var collectUsage = function(list) {
   var result = {};
 
-  list.forEach( function( file, i ) {
-    console.log( i + ' ' + file );
+  list.forEach( function( file, idx ) {
+    console.log( idx + ' ' + file );
 
-    var content = fs.readFileSync( file, 'utf-8' ),
-        doc = new domParser().parseFromString(content),
-        nodes = doc.childNodes;
+    var doc,
+        nodes,
+        content = fs.readFileSync( file );
+
+    content = euckr2utf8.convert(content).toString('UTF-8');
+    doc = new domParser().parseFromString(content);
+    nodes = doc.childNodes;
 
     var i;
 
