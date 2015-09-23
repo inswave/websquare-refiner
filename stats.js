@@ -1,6 +1,7 @@
 var fs = require('fs'),
     path = require('path'),
     _ = require('underscore'),
+    iconv_lite = require('iconv-lite'),
     Iconv = require('iconv').Iconv;
 
 var ArrayProto = Array.prototype,
@@ -84,7 +85,8 @@ var collectUsage = function(list) {
         nodes,
         content = fs.readFileSync( file );
 
-    content = euckr2utf8.convert(content).toString('UTF-8');
+    //content = euckr2utf8.convert(content).toString('UTF-8');
+    content = iconv_lite.decode( content, 'CP949' );
     doc = new domParser().parseFromString(content);
     nodes = doc.childNodes;
 
