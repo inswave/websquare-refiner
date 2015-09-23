@@ -1,14 +1,12 @@
 var fs = require('fs'),
     path = require('path'),
     _ = require('underscore'),
-    iconv_lite = require('iconv-lite'),
-    Iconv = require('iconv').Iconv;
+    iconv_lite = require('iconv-lite');
 
 var ArrayProto = Array.prototype,
     push       = ArrayProto.push;
 
-var domParser = require('xmldom').DOMParser,
-    euckr2utf8 = new Iconv( 'EUC-KR', 'UTF-8');
+var domParser = require('xmldom').DOMParser;
 
 var targetDir = '/Users/maninzoo/Contents/temp/09_23_2015/conversion/xml/';
 
@@ -85,7 +83,6 @@ var collectUsage = function(list) {
         nodes,
         content = fs.readFileSync( file );
 
-    //content = euckr2utf8.convert(content).toString('UTF-8');
     content = iconv_lite.decode( content, 'CP949' );
     doc = new domParser().parseFromString(content);
     nodes = doc.childNodes;
