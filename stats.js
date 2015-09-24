@@ -3,6 +3,8 @@ var fs = require('fs'),
     _ = require('underscore'),
     iconv_lite = require('iconv-lite');
 
+var fileManager = require('./util/fileManager');
+
 var ArrayProto = Array.prototype,
     push       = ArrayProto.push;
 
@@ -97,39 +99,6 @@ var collectUsage = function(list) {
   return result;
 };
 
-var getFileList = function( dir, done ) {
-  var results = [];
-  fs.readdir( dir, function( err, list ) {
-    if (err) {
-      return done(err);
-    }
-
-    var pending = list.length;
-    if ( !pending ) {
-      return done( null, results );
-    }
-
-    list.forEach( function(file) {
-      file = path.resolve( dir, file );
-      fs.stat( file, function( err, stat ) {
-        if ( stat && stat.isDirectory() ) {
-          getFileList( file, function( err, res ) {
-            push.apply( results, res );
-            if ( !--pending ) done( null, results );
-          } );
-        } else {
-          if ( file.lastIndexOf( '.xml' ) > 1 ) {
-            results.push(file);
-          } else {
-            console.log( 'Omit ' + file );
-          }
-          if ( !--pending) done( null, results );
-        }
-      } );
-    } );
-  } );
-};
-
 var sortData = function (data) {
   var result;
 
@@ -163,7 +132,7 @@ var sortData = function (data) {
   return _.sortBy( result, 'count' );
 };
 
-getFileList( targetDir, function( err, list ) {
+fileManager.getFileList( targetDir, function( err, list ) {
   var data,
       sortedData;
 
