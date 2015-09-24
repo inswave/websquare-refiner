@@ -29,8 +29,6 @@ var capture = function capture ( list, type ) {
         url = conf.baseURL + '?w2xPath=' + w2xPath,
         nightmare = new Nightmare();
 
-    console.log(url);
-
     nightmare = nightmare
       .viewport( size[type].width, size[type].height )
       .goto( url );
@@ -38,6 +36,9 @@ var capture = function capture ( list, type ) {
     nightmare = nightmare.wait.apply( nightmare, waitCondition[type] );
 
     nightmare.screenshot( path.resolve( conf.basePath + w2xPath.substring( 0, w2xPath.length - 3 ) + 'png' ) )
+      .url( function ( url ) {
+        console.log( url );
+      } )
       .run( function( err, nightmare ) {
         console.log( 'Done.' );
       } );
@@ -45,4 +46,4 @@ var capture = function capture ( list, type ) {
 };
 
 capture( general, 'general' );
-//capture( mobile, 'mobile' );
+capture( mobile, 'mobile' );
